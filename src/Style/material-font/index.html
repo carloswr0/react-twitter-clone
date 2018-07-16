@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Icons Index</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="iconfont/materialdesignicons.min.css" rel="stylesheet">
+    <link href="iconfont/style.css" rel="stylesheet">
+
+      <style>
+        @import url(http://fonts.googleapis.com/css?family=RobotoDraft&lang=en);
+        body {
+          font-family:'RobotoDraft', Arial, sans-serif;
+          font-size: 10px;
+        }
+        div.ic {
+          width: 65px;
+          display:inline-block;
+          text-align:center;
+          white-space:wrap;
+          vertical-align:top;
+          padding:4px;
+        }
+
+        div.ic:hover {
+          background-color: #ddd;
+          cursor: pointer;
+        }
+
+        .mdi { font-size: 24px; }
+
+        .wbreak {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          width: 100%;
+          text-overflow: ellipsis;
+        }
+        header { display: table; margin: 10px 0 30px; }
+        header > * { display: table-cell; width: 50%; padding-top: 20px; vertical-align: middle;}
+        .modal-body { text-align: center; font-size: 14px }
+        .modal-body i { font-size: 48px; }
+      </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <header class="col-xs-12">
+        <h3>Material Icons</h3>
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputAmount">Filter Icon</label>
+          <div class="input-group">
+            <div class="input-group-addon"><i class="mdi mdi-magnify"></i></div>
+            <input type="text" class="form-control" id="filter" placeholder="Filtro">
+          </div>
+        </div> 
+      </header>
+      <div class="col-xs-12" id="content"></div>
+    </div>
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="smallModal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h5 class="modal-title" id="myModalLabel">Utilizar Icono</h5>
+          </div>
+          <div class="modal-body">
+              <div><i class="mdi"></i><br><span></span></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="btnSubmit">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="data.js"></script>
+
+    <script type="text/javascript">
+    (function () {
+
+      var repl = new RegExp('-', 'g');
+          list = [];
+
+      for(var i in icons)
+      {
+        var str = icons[i];
+        var div = [
+          '<div class="ic"><i class="mdi mdi-', str, '" title="', str,'"></i><br><span class="wbreak">', str.replace(repl, ' '),'</span></div>'].join('');
+
+        list.push(div);
+      }
+
+      $('#content').html(list.join(''));
+
+    })();
+
+
+    $('#filter').keyup(function () {
+
+        var filter = this.value.toLowerCase();  // no need to call jQuery here
+
+        $('.ic').each(function() {
+            /* cache a reference to the current .media (you're using it twice) */
+            var _this = $(this);
+            var title = _this.find('span').text().toLowerCase();
+            /* 
+                title and filter are normalized in lowerCase letters
+                for a case insensitive search
+             */
+            if (title.indexOf(filter) < 0) {
+              _this.hide();
+            } else {
+              _this.show();
+            }
+        });
+    });
+
+    $('#content').on('click', '.ic', function(e){
+      var $this = $(this),
+          $modal = $('#smallModal'),
+          icon = $this.find('i')[0].className,
+          name = $this.find('span').text();
+
+      $modal.find('.modal-body span').text(name);
+
+      var $i = $modal.find('.modal-body i');
+      $i[0].className = icon;
+
+      $modal.modal('show');
+    });
+
+
+    $('#btnSubmit').on('click', function(e) {
+      e.preventDefault();
+
+      var icon = $('#smallModal').find('.modal-body i').text();
+
+      if (parent.SendIconToSilverlight) {
+          parent.SendIconToSilverlight(icon);
+          window.close();
+      }
+      else {
+          console.log(icon);
+      }
+
+    });
+
+    </script>
+
+  </body>
+</html>

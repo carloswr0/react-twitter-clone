@@ -1,0 +1,1070 @@
+.CommCenterHome {
+	height: 100%;
+}
+
+.CommCenterHome .CommCenterRow {
+    margin-right: 0px; 
+    margin-left: 0px; 
+    height: 100%;
+}
+
+/****************************************************/
+
+.CommCenterHome .CommCenterTab .CommxLeftWindow {
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+}
+
+.CommxLeftWindow .CallsPrincipalWindow {
+ 	font-family: var(--Comm-Font);
+ 	height: 100%;
+ 	color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.CommCenterHomeModal{
+	margin:-10px!important;
+}
+
+.CommxLeftWindow .CallsPrincipalWindow .CallTitle {
+	flex-direction: column;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+    height: 25%;
+}
+
+.CommxLeftWindow .CallsPrincipalWindow .CallTitle .currentCallDuration {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.7em;
+	font-weight: bolder;
+	height: 40px;
+}
+
+.CallTitle .currentCallP {
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	font-size: 1em;
+	justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+/* -------------------------------------- */
+
+.CallBody {
+	width: 100%;
+    height: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.CallBody .CallerInfo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.CallerInfo .CallerInfoIcon{
+	font-size: 2em;
+}
+
+.CallsPrincipalWindow .CallBody {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+
+/* -------------------------------------- */
+
+.CallsPrincipalWindow .CallBody .RowOfButtons {
+	display: flex;
+	justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    width: 100%;
+}
+
+.CallsPrincipalWindow .CallBody .callButtonStyle {
+	height: 80px;
+	width: 80px;
+	background-color: inherit;
+	font-weight: bolder;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	padding: 10px;
+	font-size: 0.8em;
+	flex-basis: 33%;
+}
+
+.CallsPrincipalWindow .CallBody .callButtonStyle:hover .callBttnIcon {
+	font-size: 4em;
+	transition: 0.1s;
+}
+
+.CallsPrincipalWindow .CallBody .callButtonStyle:hover .callBttnText
+{
+	transition: 0.1s; 
+}
+
+.CallsPrincipalWindow .CallBody .callBttnIcon {
+	font-size: 3em;
+	text-align: center;
+}
+
+/* -------------------------------------- */
+
+
+.callingAnim {
+    -webkit-animation-name: callshine; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: callshine;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.row:nth-child(2n+1) .callingAnim {
+    -webkit-animation-name: callshinePairs; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: callshinePairs;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes callshine {
+    0% {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Standard syntax */
+@keyframes callshine {
+    0% {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes callshinePairs {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+/* Standard syntax */
+@keyframes callshinePairs {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+.CallsPrincipalWindow .CallBody .EndButtonStyle {
+	margin: 10px 0px;
+	height: 60px;
+    width: 60px;
+	font-weight: bolder;
+	cursor: pointer;
+	border-radius: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px;
+	font-size: 0.8em;
+}
+
+.CallsPrincipalWindow .CallBody .EndButtonStyle:hover .endButton{
+	font-size: 4em;
+	transition: 0.1s;
+}
+
+.CallsPrincipalWindow .CallBody .EndButtonStyle .endButton {
+	font-size: 3em;
+}
+
+/* -------------------------------------- */
+
+.CallsPrincipalWindow .RowOfEmoticons {
+    /*display: flex;            */
+    /*flex-direction: row;      */
+    /*flex-wrap: wrap;          */
+    /*justify-content: center;  */
+    /*padding-top: 50px;        */
+    height: 15%;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(0,0,0,0.5);
+    color: #1b2733;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.CallsPrincipalWindow .consoleEmoticon {
+	filter: invert(100%);
+    cursor: pointer;
+}
+.CallsPrincipalWindow .consoleEmoticon:hover {
+    filter: invert(50%);
+}
+.CallsPrincipalWindow .RowOfEmoticons .consoleText{
+    text-align: center;
+    color: white;
+    font-size: 1em;
+}
+@media (min-width: 768px) {
+    .CallsPrincipalWindow .RowOfEmoticons .consoleText {font-size: 0.8em;}
+}
+
+@media (min-width: 992px) {
+    .CallsPrincipalWindow .RowOfEmoticons .consoleText {font-size: 0.8em;}
+}
+
+@media (min-width: 1200px) { 
+    .CallsPrincipalWindow .RowOfEmoticons .consoleText {font-size: 1em;}
+} 
+
+
+
+.CallsPrincipalWindow .buttonEmoticon {
+	/* height: 80px;               */
+	/* width: 80px;                */
+	/* background-color: inherit;  */
+	/* color: white;               */
+	/* font-weight: bolder;        */
+	/* cursor: pointer;            */
+	/* display: flex;              */
+	/* justify-content: center;    */
+	/* align-items: center;        */
+	/* flex-direction: column;     */
+	/* padding: 10px;              */
+	/* font-size: 0.8em;           */
+
+    align-items: center;
+    
+    color: white;
+    display: flex;
+    flex: 0 20%;
+    justify-content: center;
+    margin: 10px 0;
+    max-width: 100%;
+    padding: 10px;
+    text-align: center;
+    width: 40px;
+}
+
+
+
+/* -------------------------------------- */
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+
+
+@media (min-width: 768px) {
+	.CommxLeftWindow .CallsPrincipalWindow .CallTitle {font-size: 1.8em;}
+}
+
+@media (min-width: 992px) {
+	.CommxLeftWindow .CallsPrincipalWindow .CallTitle {font-size: 2.2em;}
+}
+
+@media (min-width: 1200px) { 
+	.CommxLeftWindow .CallsPrincipalWindow .CallTitle {font-size: 2.4em;}
+} 
+
+/* -------------------------------------- */
+
+.CommCenterHome .CommCenterNavigation {
+	height: 100%;
+	font-style: var(--Comm-Font);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    transition: 0.1s;
+    padding: 0px;
+    width: 60px;
+    top: 0;
+    bottom:0;
+    position:fixed;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.CommCenterHome .CommCenterNavigation .CommNodeList {
+	padding-left: 0px;
+	list-style-type: none;
+	margin: 0px;
+	height: 90%;
+    width: 100%;
+	transition: 0.1s;
+	display: flex;
+    justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+}
+
+.CommCenterHome .CommCenterNavigation .CommNodeList .CommNode {
+	font-size: 2em;
+	cursor: pointer;
+	width: 87%;
+	height: 60px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 6px;
+	padding-bottom: 6px;
+    max-height: 60px;
+    flex-shrink: 0;
+}
+
+.CommCenterHome .CommCenterNavigation .CommNodeList .CommNode:hover {
+	transition: 0.1s;
+	border-right-style: solid;
+	border-right-color: #00000040;
+	border-right-width: 3px;
+}
+
+.CommCenterHome .CommCenterNavigation .CommNodeList .CommNode p.NodeText{
+	/*color: inherit;*/
+	font-size: 0.39em;
+	margin: 0px;
+}
+
+/*------------------------------------------------------*/
+
+.CommCenterHome .CommCenterTab {
+	font-family: var(--Comm-Font);
+    margin-left: 60px;
+    padding: 0px;
+    height: 100%;
+}
+
+.CommCenterHome .CommCenterTab .CommxRightWindow {
+    padding: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.CommCenterHome .CommCenterTab .CommxRightWindow .formularioContacto{
+    min-height: calc(100% - 120px);
+    overflow: auto;
+}
+
+.CommCenterHome .CommCenterTab .CommxRightWindow .formularioContacto .sidebar-contact-avatar{
+    width: 50px;
+    height: 50px;
+    background: #0000003d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: white;
+    border: 2px solid #0000003b;
+    margin-right: 15px;
+}
+
+.CommCenterHome .CommCenterTab .CommxRightWindow .formularioContacto .commcenter-sidemenu {
+    margin-bottom: 0px!important;
+}
+
+.CommCenterHome .CommCenterTab .CommxRightWindow .menuContextual {
+    height: 40px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/*------------------------------------------------------*/
+
+.CommCenterHome .CommCenterTab .CommxRightWindow .CardInfoTabSwitcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    height: 60px; 
+    min-height: 60px;
+    list-style: none;
+    margin: 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.CommCenterHome .CommCenterTab .CommxRightWindow .CardInfoTab {
+    padding-left: 35px;
+    padding-right: 35px;
+    cursor: pointer;
+    width: 95px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s;
+}
+
+.CommCenterHome .CommCenterTab .CommxRightWindow i.CardInfoIcon{
+    font-size: 2.0em;
+    transition: 0.1s;
+}
+
+.CommCenterHome .CommCenterTab .CommxRightWindow .CardInfoTab:hover {
+   	border-bottom-style: solid;
+	border-bottom-color: #00000040;
+	border-bottom-width: 3px;
+    transition: 0.1s;
+}
+
+/*------------------------------------------------------*/
+
+.CommCenterHome .CommCenterTab .CommxRightWindow .CardInfoClose {
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s;
+}
+
+.CommCenterHome .CommCenterTab .CommxRightWindow .CardInfoClose:hover {
+    background-color: white;
+    transition: 0.1s;
+}
+
+.CommCenterHome .CommCenterTab .CommxRightWindow i.CardInfoCloseIcon{
+    font-size: 2.0em;
+    transition: 0.1s;
+}
+.CommCenterHome .CommCenterTab .CommxRightWindow i.CardInfoCloseIcon:hover{
+    font-size: 2.1em;
+    color: white;
+    transition: 0.1s;
+}
+
+/*------------------------------------------------------*/
+
+.CommCenterHome .CallsPrincipalWindow .CardInfoTitle{	
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+/*------------------------------------------------------*/
+
+.CommCenterHome .CommCenterTab .CommxRightWindow .Opcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+    width: 24px;
+}
+
+.CommCenterHome .CommCenterTab .CommxRightWindow .Opcion .opcionIcon:hover  {
+    transition: 0.1s;
+	font-size: 2em;
+}
+
+/*------------------------------------------------------*/
+
+.CommCenterHome .CommCenterUpperBar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	font-family: var(--Comm-Font);
+	position: fixed;
+    width: 100%;
+    z-index: 10;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 49px;
+    margin-top: -49px;
+}
+
+.CommCenterHome .FakeHeaderForCommx {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;	
+}
+
+.CommCenterHome .CommCenterNavigation .upperbarLogoImg {
+	height: 28px;
+	width: 28px;
+	transition: 0.1s;
+	font-size: 2em;
+}
+
+.CommCenterHome .CommCenterNavigation .upperbarLogo{
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width: 60px;
+    max-width: 80px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/*------------------------------------------------------*/
+
+.CommCenterHome .CommCenterUpperBar .OpenContactTabs {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0px;
+	text-align: center;
+	height: 46px;
+	list-style: none;
+	margin: 0%;
+}
+
+/*------------------------------------------------------*/
+
+.CommCenterHome .CommCenterUpperBar .ContactTabs {
+	padding-left: 25px;
+	padding-right: 25px;
+	cursor: pointer;
+	height: 46px;
+	display: flex;
+}
+.CommCenterHome .CommCenterUpperBar .ContactTabs:hover {
+	border-bottom-style: solid;
+	border-bottom-color: #ff5252;
+	border-bottom-width: 3px;
+	transition: 0.1s;
+}
+
+.CommCenterHome .CommCenterUpperBar .ContactTabs .NodeText
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 15px;
+	height: 30px;
+}
+/*------------------------------------------------------*/
+
+.CommCenterHome .CommCenterUpperBar .OpenContactTabs .addContactButton {
+	padding-left: 25px;
+	padding-right: 25px;
+	cursor: pointer;
+	font-size: 2em;
+}
+.CommCenterHome .CommCenterUpperBar .OpenContactTabs .addContactButton:hover {
+	color: g;
+	border-style: none;
+}
+
+.CommCenterHome .CommCenterUpperBar .OpenContactTabs .addContact {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.CommCenterHome .CommCenterUpperBar .OpenContactTabs .addContact input.addContactInput {
+	background-color: transparent;
+	border-style: none;
+	color: white;
+}
+
+.CommCenterHome .CommCenterUpperBar .OpenContactTabs .addContact .searchContactIcon {
+	padding-left: 25px;
+    padding-right: 25px;
+    font-size: 2em;
+    cursor: pointer;
+}
+.CommCenterHome .CommCenterUpperBar .OpenContactTabs .addContact .searchContactIcon:hover {
+	color: #697e97;
+	border-style: none;
+}
+
+.CommCenterHome .CommCenterUpperBar .OpenContactTabs .addContact input.addContactInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   	color: white;
+    opacity: 1; /* Firefox */
+    text-align: center;
+}
+
+.CommCenterHome .CommCenterUpperBar .OpenContactTabs .addContact input.addContactInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+    text-align: center;
+}
+
+.CommCenterHome .CommCenterUpperBar .OpenContactTabs .addContact input.addContactInput::-ms-input-placeholder { /* Microsoft Edge */
+  	color: white;
+  	text-align: center;
+}
+
+/*---------------------VIDEO CONFERENCE STYLE--------------------*/
+
+.CommCenterHome .container-fluid .VideoConference {
+	padding-left: 0px; 
+    padding-right: 0px; 
+    height: 100%;
+}
+
+.CommCenterHome .container-fluid .VideoConference .App-video-container {
+ 	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 61px);
+    width: 100%
+}
+
+.CommCenterHome .conferenceActionbar {	
+    display: flex;
+    height: 61px;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+
+    width: 100%;
+    margin: 0px;
+}
+
+.CommCenterHome .conferenceActionbar .vidConfAction{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.CommCenterHome .conferenceActionbar .vidConfAction .vidConfIcon{
+	font-size: 2em;
+	transition: 0.1s;
+}
+
+.CommCenterHome .conferenceActionbar .vidConfAction:hover .vidConfIcon{
+	font-size: 3em;
+	transition: 0.1s;
+}
+
+.CommCenterHome .raven .emoji-keyboard {
+	height: 100px;
+    max-height: 100px;
+    max-width: initial;
+    min-height: initial;
+    position: initial;
+    display: none;
+}
+
+
+.CommCenterHome .raven .write-wrap a:hover{
+    text-decoration: none;
+}
+.CommCenterHome .raven .write-wrap a{
+    text-decoration: none;
+}
+
+.CommCenterHome .raven .write-wrap .chatWindowIcon:hover{
+    color: rgba(0, 0, 0, 0.8);
+    transition: 0.1s;
+    text-decoration: none;
+}
+
+.CommCenterHome .raven .emoji-keyboard.open {
+    display: initial;
+    margin-top: 10px;
+}
+
+.CommCenterHome .raven-detail {
+    transition: 0.1s;
+}
+
+.VideoConferenceList {
+    list-style: none;
+}
+
+.VideoConferenceListTitle {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 2;
+    padding-left: 10px;
+    transition: 0.1s;
+    margin-bottom: 10px;
+    height: 35px;
+}
+
+.VCLi {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    transition: 0.1s;
+    padding-bottom: 7;
+    padding-left: 10px;
+    padding-top: 10px;
+
+}
+.VCLi:hover {
+    color: rgb(49, 43, 43);
+}
+
+.VideoConferenceList li:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.CommCenterhome .VideoConference .VideoConferenceUpperLobby{
+    height: 50%;
+    margin: 0px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.CommCenterhome .VideoConference .VideoConferenceLobby{
+	margin: 0px;
+	color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+}
+
+.CommCenterhome .VideoConference .VideoConferenceLobby .ConferenceLobbyIcon{
+    font-size: 6em;
+}
+
+.CommCenterhome .VideoConference .ConferenceLobbyText{
+    font-size: 2em;
+}
+
+.CommCenterhome .VideoConference .VideoConferenceMainIcon{
+    font-size: 10em;
+}
+
+.CommCenterhome .VideoConference .ConferenceLobbyDiv{	
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+	cursor: pointer;
+}
+
+.CommCenterhome .VideoConference .ConferenceLobbyDivTitle{   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 240px;
+}
+
+.CommCenterhome .enterConferenceDiv {
+    display: flex;
+    align-items: center;
+}
+
+.CommCenterhome .enterConferenceDiv input.conferenceid{
+    width: 300px;
+    border-style: none;
+    margin: 15px;
+}
+
+.CommCenterhome .enterConferenceDiv input.conferenceid::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+    text-align: center;
+}
+
+.CommCenterhome .enterConferenceDiv input.conferenceid:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+    text-align: center;
+}
+
+.CommCenterhome .enterConferenceDiv input.conferenceid::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+    text-align: center;
+}
+/*----------------------To hide the Chat-----------------------*/
+
+.CommCenterHome.HideNavigation .CommCenterNavigation {
+	margin-left: -60px;
+}
+
+.CommCenterHome.HideNavigation .CommCenterTab {
+	margin-left: 0;
+    border-style: none;
+}
+
+/*-------------------VideoConferencias------------*/
+
+
+/*---------------------Chat Raven personalizado---------------*/
+
+
+.CommCenterHome .CommxLeftWindow .CommxRavenChat .nano-content {
+    height: 100%;
+}
+
+.CommCenterHome .CommxLeftWindow .CommxRavenChat .has-scrollbar {
+    height: 100%;
+}
+
+.CommCenterHome .CommxLeftWindow .raven-detail{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px; 
+}
+
+.CommCenterHome .CommxLeftWindow .raven .chat{
+    height: calc(100% - 66px);
+    width: 100%;
+}
+
+.CommCenterHome .CommxLeftWindow .raven .write-wrap{
+   
+}
+
+.CommCenterHome .CommxLeftWindow .no-messages-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+.CommCenterHome .CommxLeftWindow .no-messages-iconalert {
+    font-size: 3em;
+}
+
+/*-----------------------Instagram-----------------*/
+.Instagram-Home .Instagram-Header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.Instagram-Home img.Instagram-ProfilePicImg {
+    border: 3px solid;
+    background-size: cover;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;    
+    border-radius: 150px;
+}
+
+.Instagram-Home .Instagram-ProfileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Instagram-Home .Instagram-username {    
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.Instagram-Home .Instagram-counts {    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Instagram-Home .Instagram-Grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Instagram-Home .igPhotoContainer, .igContainer{
+    flex-basis: auto;
+    padding: 5px;
+}
+
+.Instagram-Home .Instagram-OptionsIcon {
+    cursor: pointer;
+    font-size: 2em;
+    transition: 0.1s;
+}
+
+.Instagram-Home .Instagram-OptionsIcon:hover {
+    color: #ffffff70;
+}
+
+.Instagram-Home .FollowBttn, .UnfollowBttn{
+    border-radius: 40px;
+    width: 100px;
+    border-style: solid;
+    border-color: #abb8c2;
+    transition: 0.1s;
+    border-width: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Instagram-Home .FollowBttn:hover{
+    border-color: #17b04b;
+}
+
+.Instagram-Home .UnfollowBttn:hover{
+
+    border-color: #d3263b;
+}
+
+.Instagram-Options{    
+    transition: 0.1s;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    width: 100%;
+}
+
+.Instagram-Options-Li{    
+    padding-left: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.Instagram-Options-Li:hover{    
+    border-left: 3px solid #ff5252;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/*---------------------FIN Instagram---------------*/
+
+/* VIDEO CONFERENCIAS DE TWITLIO */ 
+
+
+.VideoConfereceTwilio .flex-container {
+  display: flex;
+  border: 1px solid green;
+  justify-content: space-between;
+  padding: 5px;
+  margin-top: 10px;
+ 
+}
+.VideoConfereceTwilio .local-media2 {
+  width: 270px;
+  height: 202px;
+  border: 1px solid #cececc;
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.VideoConfereceTwilio .flex-item {
+  margin: 5px;
+
+}
+
+.VideoConfereceTwilio .flex-item:first-child {
+  /* background-color: aqua; */
+  flex: 2;
+}
+
+.VideoConfereceTwilio .flex-item:nth-child(2) {
+  /* background-color: blueviolet; */
+  flex: 1;
+}
+
+.VideoConfereceTwilio .flex-item:last-child {
+  background-color: beige;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.VideoConfereceTwilio #remote-media video {
+  width: inherit;
+  height: 200px;
+}
