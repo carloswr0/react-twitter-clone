@@ -40,13 +40,9 @@ class Profile extends React.Component {
 	constructor(props){
 	    super(props);
 	    this.state = { 
-	    	searchText: "",
+	    	
 	    };
-	    this.profileState = this.profileState.bind(this);
 	    this.handleShow = this.handleShow.bind(this);
-	    this.onInputEnter = this.onInputEnter.bind(this);
-	    this.onIconPress = this.onIconPress.bind(this);
-	    this.handleChange = this.handleChange.bind(this);
   	}
 
   	componentDidMount(){
@@ -67,45 +63,7 @@ class Profile extends React.Component {
     	this.props.onShow(this.props.item.screen_name);
   	}
 
-  	profileState(state){
-  		this.setState(state);
-  		this.input.value = "";
-  	}
-
 	//Funcion de agregar.
-  
-	onInputEnter(e) {
-        if (e.key === 'Enter') {
-            if (e.target.value){
-                let item = e.target.value;
-                // Now add it to the 'items' array state
-                this.props.onSearch(item);
-                // On enter, remove the value from the input
-                e.preventDefault();
-                e.target.value = '';
-                this.setState({searchText: ""});
-            }
-        }
-    }
-
-    //Funcion de agregar con el evento por presionar el Icono
-    onIconPress() {   
-        if (this.state.searchText.length > 0){
-            // Now add it to the 'items' array state
-            this.props.onSearch(this.state.searchText);
-            // On enter, remove the value from the input
-            this.input.value = '';
-            this.setState({searchText: ""});
-        }
-    }
-
-  	handleChange(event) {
-        let input = event.target.value;
-        this.setState({
-            searchText : (input)
-        });
-        this.props.showTypeaheadModal(input);
-    }
 
 	render() { 
 			//Toma Item viniendo de APP.js

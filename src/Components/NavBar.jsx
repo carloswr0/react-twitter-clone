@@ -12,13 +12,53 @@ class NavBar extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-
+			searchText: "",
 		};
-		
+		this.onInputEnter = this.onInputEnter.bind(this);
+	    this.onIconPress = this.onIconPress.bind(this);
+	    this.handleChange = this.handleChange.bind(this);
+	    this.profileState = this.profileState.bind(this);
 	}
 
-	render(){
+	onInputEnter(e) {
+        if (e.key === 'Enter') {
+            if (e.target.value){
+                let item = e.target.value;
+                // Now add it to the 'items' array state
+                this.props.onSearch(item);
+                // On enter, remove the value from the input
+                e.preventDefault();
+                e.target.value = '';
+                this.setState({searchText: ""});
+            }
+        }
+    }
 
+     profileState(state) {
+  		this.setState(state);
+  		this.input.value = "";
+  	}
+
+    //Funcion de agregar con el evento por presionar el Icono
+    onIconPress() {   
+        if (this.state.searchText.length > 0){
+            // Now add it to the 'items' array state
+            this.props.onSearch(this.state.searchText);
+            // On enter, remove the value from the input
+            this.input.value = '';
+            this.setState({searchText: ""});
+        }
+    }
+
+  	handleChange(event) {
+        let input = event.target.value;
+        this.setState({
+            searchText : (input)
+        });
+        this.props.showTypeaheadModal(input);
+    }
+
+	render(){
 		let activeMenuStyle1 = {}					
 			let activeMenuStyle2 = {}
 
@@ -54,18 +94,10 @@ class NavBar extends Component {
 				{
 					this.props.loadingContent ? 
 					<LittleLoader /> : 
-					<Language className="Twitter-Logo"/>
-				}
-				{
-					this.props.isGoingToSearch ? 
-					<SearchWindow 
-						profileState={this.profileState}
-						searchText={this.state.searchText}
-						onShow={this.props.onShow}
-						clearSearchText={this.clearSearchText}
-					/> : 
-					null
-				}				
+					<div style={{'width':'40px'}}>
+						<Language className="Twitter-Logo"/>
+					</div>
+				}			
 				<div className="Search-Tweets">
 					<form id="Search-Tweets-Form" onKeyPress={this.onInputEnter}> 
 						<input className="Search-Tweets-Input"
@@ -76,6 +108,16 @@ class NavBar extends Component {
                        		maxLength="30"
 						/>
 					</form>
+					{
+					this.props.isGoingToSearch ? 
+						<SearchWindow 
+							profileState={this.profileState}
+							searchText={this.state.searchText}
+							onShow={this.props.onShow}
+							clearSearchText={this.clearSearchText}
+						/> : 
+						null
+					}	
 				</div>
 				<Search 
 					className="Search-Tweets-Button" 

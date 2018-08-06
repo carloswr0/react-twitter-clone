@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import Create from '@material-ui/icons/Create';
+import Clear from '@material-ui/icons/Clear';
 
 class Reply extends Component {
 
@@ -34,8 +36,6 @@ class Reply extends Component {
 		'fontWeight': 'bold',
 		'color': '#aab8c2',
     	'fontSize': '1.5em',
-    	'paddingRight': '10px',
-    	'fontFamily': 'Roboto',
 		}
 			
 		if (this.state.remainingCharacters < 20) {
@@ -49,7 +49,7 @@ class Reply extends Component {
 						<form className="Reply-Tweet-Form"> 
 							<textarea className="Reply-Tweet-TextArea"
 								maxLength="280"
-								placeholder="Let's talk..."
+								placeholder="Write a message..."
 								value={this.props.value}
 								onChange={this.handleChange.bind(this)}
 								defaultValue={'@'+item.user.screen_name+' '}
@@ -58,14 +58,17 @@ class Reply extends Component {
 						</form>
 			        </div>
 			        <div className="row ReplyMenu">
-				        <div className="IconContainerReply"> 
-							<i className="mdi mdi-pencil Reply-Button-Icon" onClick={this.props.onSubmit.bind(this,this.state.tweetText)} /> 
+				        <div className="IconContainerReply Responder" onClick={this.props.onSubmit.bind(this,this.state.tweetText)}> 
+							Responder.
 				        </div>	
 				        <div className="IconContainerReply"> 
 			        		<span className="Reply-RemainingCharacters" style={styleRemainingChars}>{this.state.remainingCharacters}</span>
 			        	</div>
 			       		<div className="IconContainerReply"> 
-			        		<i className="mdi mdi-close Reply-Button-Icon-Close Reply-Tweet-Close" onClick={this.props.closeReplyTweet}/>
+			        		<Clear 
+			        			className="Reply-Button-Icon-Close Reply-Tweet-Close" 
+			        			onClick={this.props.closeReplyTweet}
+			        		/>
 			        	</div>
 			        </div>
 		      	</div>)}

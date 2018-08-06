@@ -18,15 +18,9 @@ class SearchWindow extends Component {
 		
 	return(
 			<div className="TypeAheadModal">
-		        <div className="header-nav header-nav-options">
-					<li className="dropdown hidden-xs open">
-						<ul className="dropdown-menu animation-expand">
-							<div className="dropdown-menu-top-section">
-								<li className="TypeAheadModal-Li" onClick={this.searchHandler}>Buscar a @{this.props.searchText}.</li>
-								<li className="TypeAheadModal-Li">Buscar #{this.props.searchText} en tendencias.</li>
-							</div>
-						</ul>
-					</li>
+				<div className="dropdown-menu-top-section">
+					<span className="TypeAheadModal-Li" onClick={this.searchHandler}>Buscar a @{this.props.searchText}.</span>
+					<span className="TypeAheadModal-Li">Buscar #{this.props.searchText} en tendencias.</span>
 				</div>
 	      	</div>
       	)

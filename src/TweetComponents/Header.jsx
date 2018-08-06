@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Repeat from '@material-ui/icons/Repeat';
 
 class Header extends React.Component {
   constructor(props) {
@@ -63,7 +64,8 @@ class Header extends React.Component {
     return (
       <div className="row Header">
         {isRT ? 
-          <div style={{display: 'flex'}}><i className="mdi mdi-twitter-retweet WhoRetweeted-Icon" />
+          <div style={{display: 'flex'}}>
+            <Repeat className="WhoRetweeted-Icon" />
             <div 
               className="WhoRetweetedDiv" 
               style={{display: 'flex', justifyContent: 'flexStart', alignItems: 'center' }}>
@@ -71,7 +73,7 @@ class Header extends React.Component {
             </div>
           </div>
         : null}
-        <a className="Account-Group" onClick={this.handleShow}>
+        <div className="Account-Group" onClick={this.handleShow}>
       
           <strong className="Tweets-Fullname">{item.user.name}{' '}</strong>
       
@@ -79,12 +81,13 @@ class Header extends React.Component {
             <s className="UserScreenNameAt">{'@'}</s>
             <b className="UserScreenName">{item.user.screen_name}</b>
           </span>
-        </a>
-        <small className="Tweets-Time">
-          <a href={`http://twitter.com/${item.user.screen_name}/status/${item.id_str}`} className="Tweets-Timestamp">
-            {' • '}{timestamp}
-          </a>
-        </small>
+          <small className="Tweets-Time">
+            <a href={`http://twitter.com/${item.user.screen_name}/status/${item.id_str}`} className="Tweets-Timestamp">
+              {' • '}{timestamp}
+            </a>
+          </small>
+        </div>
+        
       </div>
     )
   }

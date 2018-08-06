@@ -1,4 +1,5 @@
 import React from 'react';
+import Create from '@material-ui/icons/Create';
 
 class NewTweet extends React.Component {
 	
@@ -6,7 +7,7 @@ class NewTweet extends React.Component {
 	    super(props);
 	    this.state = { 
 	      remainingCharacters: 280,
-	      tweetText: '@'+this.props.item.screen_name+' ',
+	      tweetText: '',
 	    };
 	    this.sendTweet = this.sendTweet.bind(this);
 	}
@@ -39,12 +40,11 @@ class NewTweet extends React.Component {
 	render() { 
 	const {item, logedUserItem} = this.props
 	const styleRemainingChars = {
-		'float': 'right',
 		'color': 'white',
-		'left': '30px',
 		'fontWeight': 'bold',
 		'minWidth' : '24px',
-		'fontFamily': 'Roboto',
+	    'display': 'flex',
+	    'justifyContent': 'center',
 	}
 		
 	if (this.state.remainingCharacters < 20) {
@@ -61,7 +61,7 @@ class NewTweet extends React.Component {
 				<img className="NewTweet-Avatar" alt="NewTweetUserPicture" src={imageUrl} />
 			</div>
 
-			<div className="col-xs-10 col-sm-10 col-md-10 col-lg-10 NewTweet-Text">
+			<div className="col-xs-9 col-sm-9 col-md-9 col-lg-9 NewTweet-Text">
 				<form className="NewTweet-Form"> 
 					<textarea className="NewTweet-TextArea"
 						maxLength="280"
@@ -74,11 +74,13 @@ class NewTweet extends React.Component {
 				</form>
 			</div>
 
-			<span style={styleRemainingChars} className="NewTweet-RemainingCharacters">{this.state.remainingCharacters}</span>
+			<span style={styleRemainingChars} className="col-xs-1 col-sm-1 col-md-1 col-lg-1 NewTweet-RemainingCharacters">
+				{this.state.remainingCharacters}
+			</span>
 			
-			<i 
-				className="col-xs-1 col-sm-1 col-md-1 col-lg-1 mdi mdi-pencil NewTweet-Button-Icon" 
-				onClick={this.sendTweet} 
+			<Create 
+				className="col-xs-1 col-sm-1 col-md-1 col-lg-1 NewTweet-Button-Icon" 
+				onClick={this.sendTweet}
 			/>
 
 		</div>

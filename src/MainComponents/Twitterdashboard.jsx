@@ -336,7 +336,7 @@ class Twitterdashboard extends Component {
 
   searchTweets(item) {
     const _this = this; 
-    this.setState({loadingContent: true });
+    this.setState({loadingContent: true ,isGoingToSearch: false});
 
     hello('twitter').api('search/tweets.json', 'GET', {q: item, lang: 'es'})
     .then(function(response) {
@@ -489,6 +489,7 @@ class Twitterdashboard extends Component {
           ActiveNav={this.state.ActiveNav}
           onMentions={this.requestMentions} 
           onHome={this.requestHomeTimeline}
+          onSearch={this.searchTweets}
           loadingContent={this.state.loadingContent} 
           onShow={this.showProfile}
           isGoingToSearch={this.state.isGoingToSearch}
@@ -542,6 +543,8 @@ class Twitterdashboard extends Component {
           ActiveNav={this.state.ActiveNav}
           onMentions={this.requestMentions} 
           onHome={this.requestHomeTimeline}
+          onSearch={this.searchTweets}
+          showTypeaheadModal={this.showTypeaheadModal}
           loadingContent={this.state.loadingContent} 
           onShow={this.showProfile}
           isGoingToSearch={this.state.isGoingToSearch}
@@ -563,7 +566,6 @@ class Twitterdashboard extends Component {
             followUser={this.followUser}
             unfollowUser={this.unfollowUser}
             userRelationship={this.state.userRelationship}
-            showTypeaheadModal={this.showTypeaheadModal}
             isGoingToSearch={this.state.isGoingToSearch}
             usersArray={this.state.usersArray}
             logout={this.revokeAccessToken}
