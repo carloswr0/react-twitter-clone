@@ -1,0 +1,49 @@
+.Reply-Tweet {
+    form {
+        textarea {
+            resize: none;
+            width: 100%;
+            border-radius: 8px;
+            padding: 10px;
+            &:focus-within {
+                border-radius: 8px;
+                border: 2px solid;
+            }
+        }
+        div {
+            position: absolute;
+            right: 15px;
+        }
+    }
+    .Interactions {
+        display: flex;
+        align-items: center;
+    }
+    .Close {
+        color: #aab8c2;
+        fill: currentcolor;
+        font-size: 2em;
+        cursor: pointer;
+        &:hover {
+            color: #d3263b;
+        }
+    }
+    .Send-reply {
+        border-radius: 100px;
+        box-shadow: none;
+        cursor: pointer;
+        font-size: 12px;
+        height: 25px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #8E9BA6;
+        border-color: transparent;
+        color: #fff;
+        margin: 0 5px;
+        width: 100px;
+        &:hover {
+            transition: 0.2s;
+            background-color: #8e9ba6c7;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.Tweet-thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+        max-height: 64px;
+        min-width: 64px;
+        border-radius: 50px;
+        border: 2px solid;
+    }
+}

@@ -1,0 +1,116 @@
+.Twitter-Profile {
+  color: white;
+  background-color: #ffffff08;
+  .Profile {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 1px 1px black;
+    display: flex;
+  }
+  .profile-picture {
+    padding: 10px;
+    img {
+      border-radius: 100px;
+      border: 3px solid;
+      background-size: cover;
+      width: 100%;
+    }
+  }   
+  a:hover { 
+    color: white;
+  }
+  .profile-description {
+    padding: 10px;
+    margin: 0px;
+    .description-header {
+      .user-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        span {
+          font-size: 20px;
+        }
+      }
+      .username {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        b {
+          color: white;
+          font-weight: normal;
+          text-decoration: none;
+        }
+      }
+      .follow, .unfollow{
+        border-radius: 40px;
+        background-color: #0a0a0ac7;
+        width: 105px;
+        color: #abb8c2;
+        border-style: solid;
+        border-color: #00000026;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+      .follow:hover{
+        background-color: #293644;
+        color: #abb8c2;
+        border-color: #17b04b;
+      }
+      .unfollow:hover{
+        background-color: #000000bd;
+        color: #abb8c2;
+        border-color: #f30c28;
+      }
+    }
+  }
+  .follow-badge {
+    background-color: #141d26;
+    border-radius: 4px;
+    color: #8899a6;
+    font-weight: normal;
+    margin-left: 5px;
+    padding: 2px 4px;
+  }
+  .connections {
+    border-top: 1px solid black;
+    height: 48px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .connections-tabs {
+      display: block;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: normal;
+      padding: 0px 34px;
+      padding: 6px 0px;
+      background: transparent;
+      border-style: none;
+    }
+    .connections-tabs:hover { 
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      transition: 0.05s;
+      padding-bottom: 4px;
+    }
+  }
+  .shaded-button {
+    height: 25px;
+    background-color: #0000008a;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 25px;
+  }
+  .shaded-button:hover {
+    transition: 0.2s;
+    background-color: #000000a8;
+  }
+}

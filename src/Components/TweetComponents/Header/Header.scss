@@ -1,0 +1,41 @@
+.Header {
+    .Account-Group {
+        b {
+            font-weight: bold;
+        }
+        .no-decoration {
+            text-decoration: none;
+        }
+        time {
+            color: #8899a6;
+        }
+    }
+    .Retweet-Group {
+        cursor: pointer;
+        display: flex;
+        margin-bottom: 3px;
+        svg {
+            font-size: 1.5em;
+            border:none;
+            color: white;
+        }
+        div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            button {
+                border-style: none;
+                background-color: #00000000;
+                color: white;
+                border-bottom: 1px solid #00000000;
+                padding: 0px;
+                &:hover {
+                    border-bottom: 1px solid white;
+                }
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

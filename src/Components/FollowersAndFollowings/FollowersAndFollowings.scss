@@ -1,0 +1,59 @@
+.Connection {
+  border-bottom: black 1px solid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 9px 12px;
+  &:first-child  {
+    border-top: black 1px solid;
+  }
+  &:hover {
+    transition: 0.2s;
+    background-color: rgba(0,0,0,0.6);  
+  }
+  .avatar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    cursor: pointer;
+    .user-photo{
+      border-radius: 50px;
+      cursor: pointer;
+    }
+    .user-usernames {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .connection-text {
+        color: white;
+        text-decoration: none;
+      }
+    }   
+  } 
+  .user-description {
+    color: #fff;
+  }
+  .action {
+    button.follow, button.unfollow {
+      border-radius: 40px;
+      background-color: #c2abab00;
+      width: 80px;
+      color: #abb8c2;
+      border-style: solid;
+      border-color: #abb8c2;
+    }   
+    button.follow:hover {
+      background-color: #293644;
+      color: #abb8c2;
+      border-color: #17b04b;
+    }
+    button.unfollow:hover {
+      background-color: #293644;
+      color: #abb8c2;
+      border-color: #d3263b;
+    }
+  }
+}   

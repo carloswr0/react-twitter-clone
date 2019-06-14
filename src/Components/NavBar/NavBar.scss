@@ -1,0 +1,56 @@
+.Navbar {
+    position: fixed;
+    padding: 10px;
+    min-width: 650px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0px -4px 20px 0px black;
+    background-color: #243447;
+    color: white;
+    z-index: 1;
+    .search-container {
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0px; 
+            input {
+                border-radius: 50px 50px;                   
+                padding: 5px 10px;
+                outline: none;
+                border: 1px solid #DDD;
+                color: black;
+            }
+        }
+        .search-icon {
+            font-size: 2em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    .twitter-logo {
+        cursor: pointer;
+        fill: #1da1f2;
+    }
+    .home, .notifications {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        height: 60px;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 8px 5px;
+        cursor: pointer;
+        &:hover {
+            color: #1da1f2;
+            transition: 0.2s;
+        }
+    }
+}

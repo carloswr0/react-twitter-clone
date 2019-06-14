@@ -1,0 +1,18 @@
+.Twitter-app  .Searchbox {
+    position: absolute;
+    top: 55px;
+    background-color: #000000b0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    span {
+        cursor: pointer;
+        transition: 0.1s;
+        padding-right: 5px;
+        padding-left: 5px;
+        &:hover{
+            border-left: 2px solid #ff5252;
+        }
+    }
+}

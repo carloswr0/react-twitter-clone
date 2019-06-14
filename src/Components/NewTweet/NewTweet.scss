@@ -1,0 +1,36 @@
+.write-tweet {
+    border-top: 1px solid black;
+    padding: 9px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff08;
+    .avatar {
+        width: 100%;
+        border-radius: 50px;
+    }
+    .avatar-container {
+        padding: 0px;
+    }
+    textarea {
+        border: none;
+        resize: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        padding: 10px;
+        overflow-y: hidden;
+        &:focus {
+            outline: none;
+        }
+    }
+    svg {
+        color: white;
+        font-size: 1.9em;
+        cursor: pointer;
+        &:hover {
+            color: #1b86f2;
+            transition: 0.1s;
+        }
+    }
+}
