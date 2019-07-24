@@ -444,7 +444,7 @@ class Twitterdashboard extends Component {
 
     if (this.state.gotData && this.state.Authenticated && this.state.showingProfileList === true) {
       return (
-        <div className="Twitter-app"> 
+        <div className="twitter-app"> 
           <NavBar 
             ActiveNav={this.state.ActiveNav}
             onMentions={this.requestMentions} 
@@ -497,16 +497,16 @@ class Twitterdashboard extends Component {
 
     if (this.state.gotData && this.state.Authenticated && this.state.showingProfileList === false) {
       return ( 
-        <div className="Twitter-app"> 
+        <div className="twitter-app"> 
           <NavBar 
             ActiveNav={this.state.ActiveNav}
+            loadingContent={this.state.loadingContent} 
+            isGoingToSearch={this.state.isGoingToSearch}
             onMentions={this.requestMentions} 
             onHome={this.requestHomeTimeline}
             onSearch={this.searchTweets}
             showTypeaheadModal={this.showTypeaheadModal}
-            loadingContent={this.state.loadingContent} 
             onShow={this.showProfile}
-            isGoingToSearch={this.state.isGoingToSearch}
             logout={this.revokeAccessToken}
           />
           <div className="twitter-content">
