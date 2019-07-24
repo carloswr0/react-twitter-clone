@@ -26,7 +26,7 @@ const Content = (props) => {
   text = text.replace(/href=/g, 'style="text-decoration: none;color:#6CCCF9;" href=')
 
   let tweetProps = {
-    'className': 'Tweet-Text',
+    'className': 'content',
     'dangerouslySetInnerHTML': {
       '__html': text
     }
