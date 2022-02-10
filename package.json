@@ -8,7 +8,7 @@
     "@material-ui/icons": "^1.1.0",
     "autolinker": "^1.6.2",
     "hellojs": "^1.16.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "react": "^16.4.1",
     "react-dom": ">=16.4.2",
     "react-router": "^5.0.1",
